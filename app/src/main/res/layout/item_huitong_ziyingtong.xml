@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:paddingTop="@dimen/padding5"
+    android:paddingBottom="@dimen/padding5"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="空气水"
+        android:textColor="@color/textBlack"
+        android:textSize="@dimen/font_16" />
+
+
+    <TextView
+        android:id="@+id/numTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="x30"
+        android:textColor="@color/textRed"
+        android:textSize="@dimen/font_16"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/llAddCut"
+        android:layout_width="@dimen/d81"
+        android:layout_height="@dimen/d21"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/gray_solid_two_radius_bg"
+        android:padding="@dimen/d1">
+
+        <RelativeLayout
+            android:id="@+id/right_dish_remove"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@color/white">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/goods_subtract" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/d1"
+            android:layout_weight="3"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/right_dish_account"
+                style="@style/textBlack12"
+                android:layout_centerInParent="true"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="0" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/right_dish_add"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/d1"
+            android:layout_weight="2"
+            android:background="@color/white">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/goods_add" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

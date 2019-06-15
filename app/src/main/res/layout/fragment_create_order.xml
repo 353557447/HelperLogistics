@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgColor"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/create_order_ns"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="gone">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/create_order_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <LinearLayout
+        android:background="@color/white"
+        android:id="@+id/create_order_lin"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bar_height50"
+        android:orientation="horizontal"
+        android:visibility="gone">
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/addOrder"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/d28"
+            android:layout_weight="1"
+            android:background="@drawable/cff2e5f_solid_big_radius_bg"
+            android:gravity="center"
+            android:layout_marginLeft="49dp"
+            android:text="添加订单"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_14" />
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/shengChengOrder"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/d28"
+            android:layout_weight="1"
+            android:background="@drawable/cff4d14_solid_big_radius_bg"
+            android:gravity="center"
+            android:text="生成出货单"
+            android:layout_marginLeft="98dp"
+            android:layout_marginRight="49dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_14" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/wudingdan" />
+
+        <TextView
+            android:layout_marginTop="@dimen/margin10"
+            android:id="@+id/hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv"
+            android:gravity="center"
+            android:text="您有一个订单正在进行，无法创建出货订单"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/font_14" />
+
+        <TextView
+            android:id="@+id/checkBtn"
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="@dimen/dp_25"
+            android:layout_below="@+id/hint"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_25"
+            android:background="@drawable/cff2e5f_solid_big_radius_bg"
+            android:gravity="center"
+            android:text="查看订单"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_14" />
+    </RelativeLayout>
+</LinearLayout>

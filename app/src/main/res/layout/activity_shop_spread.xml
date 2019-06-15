@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f5f5f5"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_ffffff"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_10">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_5"
+            android:background="@color/color_ffffff"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="@dimen/dp_65"
+                android:layout_height="@dimen/dp_65"
+                android:src="@drawable/morenshuidian" />
+
+            <LinearLayout
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dp_15">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/shopName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="小店"
+                        android:textColor="@color/color_333333"
+                        android:textSize="@dimen/font_14" />
+
+                    <TextView
+                        android:id="@+id/shopType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="自营店"
+                        android:visibility="invisible"
+                        android:textColor="@color/color_999999"
+                        android:textSize="@dimen/font_14" />
+                </LinearLayout>
+
+                <RatingBar
+                    android:id="@+id/startNum"
+                    style="@style/startRatingStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_30"
+                    android:numStars="5"
+                    android:rating="4" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/orderCount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="销量:666"
+                        android:textColor="@color/color_999999"
+                        android:textSize="@dimen/font_10" />
+
+                    <TextView
+                        android:id="@+id/distance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="距离：1000米"
+                        android:visibility="invisible"
+                        android:textColor="@color/color_999999"
+                        android:textSize="@dimen/font_10" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_15"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/deliverFee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="配送费:10元"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/font_10" />
+
+            <TextView
+                android:id="@+id/freeHint"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_weight="1"
+                android:text="满200免配送费"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/font_10" />
+
+            <TextView
+                android:id="@+id/sendTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1小时内：100米"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/font_10" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@color/color_ffffff"
+        app:tabSelectedTextColor="@color/color_30adfd"
+        app:tabTextAppearance="@style/TabLayoutTextStyle"
+        app:tabTextColor="@color/color_999999"></android.support.design.widget.TabLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+
+</LinearLayout>

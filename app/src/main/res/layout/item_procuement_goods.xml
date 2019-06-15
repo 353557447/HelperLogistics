@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="113dp"
+    android:background="@drawable/white_solid_five_radius_bg"
+    android:orientation="vertical"
+    android:padding="@dimen/padding16">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="@dimen/dp_85"
+        android:layout_height="@dimen/dp_85"
+        android:scaleType="fitXY"
+        android:src="@color/color_30adfd" />
+
+    <TextView
+        android:layout_marginLeft="@dimen/margin10"
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/image"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="哇哈哈矿泉水18L"
+        android:textColor="@color/textBlack"
+        android:textSize="@dimen/d14" />
+
+    <TextView
+        android:textColor="@color/textRed"
+        android:layout_marginLeft="@dimen/margin10"
+        android:layout_toRightOf="@id/image"
+        android:layout_alignParentBottom="true"
+        android:text="￥20.00"
+        android:id="@+id/price"
+        android:textSize="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="@dimen/d81"
+        android:layout_height="@dimen/d21"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/gray_solid_two_radius_bg"
+        android:padding="@dimen/d1">
+
+        <RelativeLayout
+            android:id="@+id/cutBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@color/white">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/goods_subtract" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/d1"
+            android:layout_weight="3"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/num"
+                style="@style/textBlack12"
+                android:layout_centerInParent="true"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="0" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/addBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/d1"
+            android:layout_weight="2"
+            android:background="@color/white">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/goods_add" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

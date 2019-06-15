@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">水网之家物流</string>
+    <string name="cash_hint">温馨提示:
+        \n我们将在3~7个工作日为你处理，请耐心等待！
+        \n如有其他问题，请联系我们的客服，谢谢</string>
+    <string-array name="manageTitle">
+        <item>店铺管理</item>
+        <item>商品管理</item>
+        <item>订单管理</item>
+        <item>客户管理</item>
+        <item>店铺统计</item>
+        <item>店铺学习</item>
+        <item>店铺推广</item>
+    </string-array>
+
+    <string name="cancle">取消</string>
+    <string name="title">请选择时间</string>
+    <string name="commit">确定</string>
+    <string name="year">年</string>
+    <string name="month">月</string>
+    <string name="day">日</string>
+    <string name="hour">时</string>
+    <string name="minute">分</string>
+    <string name="alphabet_and_number">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789</string>
+    <string-array name="bankName">
+        <item>中国工商银行</item>
+        <item>招商银行</item>
+        <item>中国农业银行</item>
+        <item>中国建设银行</item>
+        <item>中国银行</item>
+        <item>中国民生银行</item>
+        <item>中国光大银行</item>
+        <item>中信银行</item>
+        <item>交通银行</item>
+        <item>兴业银行</item>
+        <item>上海浦东发展银行</item>
+        <item>中国人民银行</item>
+        <item>华夏银行</item>
+        <item>国家开发银行</item>
+        <item>中国邮政储蓄银行</item>
+    </string-array>
+    <string-array name="scheduleName">
+        <item>上午 8:00-12:00</item>
+        <item>上午 8:00-12:00</item>
+        <item>下午 12:00-18:00</item>
+        <item>下午 12:00-18:00</item>
+        <item>晚上 18:00-20:00</item>
+        <item>晚上 18:00-20:00</item>
+    </string-array>
+
+    <string-array name="logisticsTitle">
+        <item>待接单</item>
+        <item>已接单</item>
+        <item>配送中</item>
+        <item>已到达</item>
+    </string-array>
+</resources>

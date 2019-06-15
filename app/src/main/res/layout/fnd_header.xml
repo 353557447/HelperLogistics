@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/refresh_iv"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:src="@drawable/fnd_refresh"
+            android:paddingBottom="5dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/refresh_iv"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/refresh_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="让生活更健康"
+                android:textColor="#212121"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/refresh_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="下拉刷新"
+                android:textSize="12sp" />
+        </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgColor"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:src="@drawable/logo" />
+
+
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/versionName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:gravity="center"
+        android:text="1.0.0"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/font_12" />
+
+    <TextView
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:layout_weight="1"
+        android:gravity="bottom|center"
+        android:text="深圳福能达空气与水发展科技有限公司版权所有"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/font_14" />
+</LinearLayout>

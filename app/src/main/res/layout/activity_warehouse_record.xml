@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bgColor">
+
+    <RelativeLayout
+        android:background="@drawable/record_top_bg"
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <RelativeLayout
+                android:id="@+id/back_return"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="35dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:paddingRight="@dimen/dp_60"
+                    android:src="@drawable/back" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/record_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="37dp"
+                android:text="提货量详情"
+                android:textColor="@color/white"
+                android:textSize="@dimen/d18"
+                android:textStyle="bold" />
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/d78"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/numTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textWhite"
+                android:textSize="@dimen/d18"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/titleTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="待出货数量"
+                android:textColor="@color/textWhite"
+                android:textSize="@dimen/d12"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/llTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_ffffff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_10"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="@dimen/dp_130"
+            android:layout_height="@dimen/dp_30"
+            android:background="@drawable/blue_line_rectangle"
+            android:drawablePadding="@dimen/dp_5"
+            android:drawableRight="@drawable/xiala"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            android:text="2018-9-5"
+            android:textColor="@color/color_30adfd"
+            android:textSize="@dimen/font_14" />
+    </LinearLayout>
+
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/wutongji" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv"
+            android:gravity="center"
+            android:text="暂无数据~"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/font_12" />
+    </RelativeLayout>
+</LinearLayout>

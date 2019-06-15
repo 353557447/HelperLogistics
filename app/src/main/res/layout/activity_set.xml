@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgColor"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:textColor="@color/textBlack"
+        android:id="@+id/aboutBtn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bar_height"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@color/color_ffffff"
+        android:drawableRight="@drawable/choose"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10"
+        android:text="关于我们" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/loginOutBtn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bar_height"
+        android:layout_marginBottom="@dimen/dp_50"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:background="@drawable/cff2e5f_solid_big_radius_bg"
+        android:gravity="center"
+        android:text="退出登录"
+        android:textColor="@color/color_ffffff"
+        android:textSize="@dimen/font_14" />
+</LinearLayout>

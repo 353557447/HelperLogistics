@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f5f5f5"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/changeBtn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@color/color_ffffff"
+        android:drawableRight="@drawable/choose"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10"
+        android:text="换桶"
+        android:textColor="@color/color_333333"
+        android:visibility="gone"
+        android:textSize="@dimen/font_14" />
+
+    <View style="@style/line"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/saveBtn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:background="@color/color_ffffff"
+        android:drawableRight="@drawable/choose"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10"
+        android:text="押桶"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/font_14" />
+
+    <View style="@style/line" />
+
+    <TextView
+        android:id="@+id/returnBtn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:background="@color/color_ffffff"
+        android:drawableRight="@drawable/choose"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10"
+        android:text="退桶"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/font_14" />
+
+</LinearLayout>

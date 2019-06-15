@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bgColor"
+    tools:context="com.shuiwangzhijia.wuliu.ui.PendingOrderActivity">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/pending_order_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <RelativeLayout
+        android:id="@+id/pendding_order_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="49dp">
+
+        <TextView
+            android:id="@+id/pending_order_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/pending_order_surnbtn"
+            android:layout_alignBottom="@+id/pending_order_surnbtn"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="19dp"
+            android:layout_marginStart="19dp"
+            android:textColor="#FE0233"
+            android:textSize="@dimen/d16" />
+        <TextView
+            android:textSize="@dimen/d16"
+            android:id="@+id/pending_order_surnbtn"
+            android:layout_width="120dp"
+            android:layout_height="49dp"
+            android:text="确定"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:background="#FF4D14"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/wudingdan" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv"
+            android:gravity="center"
+            android:text="暂时没有相关的订单哦~~"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/font_12" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/root"
+    android:gravity="center_vertical"
+    android:background="@color/color_ffffff"
+    android:orientation="horizontal">
+
+    <View
+        android:id="@+id/show"
+        android:layout_width="@dimen/dp_2"
+        android:layout_height="@dimen/dp_35"
+        android:background="@color/color_30adfd" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_35"
+        android:gravity="center"
+        android:text="瓶装水"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/font_12" />
+</LinearLayout>

@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.shuiwangzhijia.wuliu">
+
+    <permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 银联需要的权限 -->
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" /> <!-- 腾讯定位 sdk 要求的权限  (开始) -->
+    <!-- 通过GPS得到精确位置 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 通过网络得到粗略位置 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 访问网络. 某些位置信息需要从网络服务器获取 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 访问WiFi状态. 需要WiFi信息用于网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 修改WiFi状态. 发起WiFi扫描, 需要WiFi信息用于网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- 访问网络状态, 检测网络的可用性. 需要网络运营商相关信息用于网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 访问网络的变化, 需要某些信息用于网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" /> <!-- 访问手机当前状态, 需要device id用于网络定位 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 支持A-GPS辅助定位 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" /> <!-- 腾讯定位 sdk 要求的权限 (结束) -->
+    <!-- Demo中使用了腾讯地图 sdk, 腾讯地图 sdk 还要求的以下权限 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_SINTERNETWIFI_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" /> <!-- 非必须权限, 用于记录 log -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 非必须权限, 用于 notification 振动 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <application
+        android:name="com.shuiwangzhijia.wuliu.base.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.shuiwangzhijia.wuliu.activitywarehouse.WhSearchOrderActivity"></activity>
+        <activity android:name="com.shuiwangzhijia.wuliu.activitydriver.DriverSearchOrder" />
+        <activity android:name="com.shuiwangzhijia.wuliu.activitydriver.DriverDeliverOrderActivity" />
+        <activity android:name="com.shuiwangzhijia.wuliu.activitywarehouse.SelfDeliverOrderActivity" />
+        <activity android:name="com.shuiwangzhijia.wuliu.activitywarehouse.DeliverOrderActivity" /> <!-- android:theme="@style/SplashThemeImage" -->
+        <activity
+            android:name="com.shuiwangzhijia.wuliu.ui.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.shuiwangzhijia.wuliu.ui.LoginActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shuiwangzhijia.wuliu.ui.MainActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shuiwangzhijia.wuliu.ui.MsgActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shuiwangzhijia.wuliu.ui.ShopManageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shuiwangzhijia.wuliu.ui.GoodsManageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shuiwangzhijia.wuliu.ui.CashActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shuiwangzhijia.wuliu.ui.ConsumerDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shuiwangzhijia.wuliu.ui.CustomerManageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shuiwangzhijia.wuliu.ui.OrderManageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shuiwangzhijia.wuliu.ui.ShopCountActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shuiwangzhijia.wuliu.ui.SetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shuiwangzhijia.wuliu.ui.AddressManageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shuiwangzhijia.wuliu.ui.EditAddressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shuiwangzhijia.wuliu.ui.ShopSpreadActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shuiwangzhijia.wuliu.ui.ShopStudyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shuiwangzhijia.wuliu.ui.ConfirmOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shuiwangzhijia.wuliu.ui.OrderPayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shuiwangzhijia.wuliu.ui.CountActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shuiwangzhijia.wuliu.ui.OrderDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shuiwangzhijia.wuliu.ui.ShoppingCartActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shuiwangzhijia.wuliu.ui.SelectShopActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shuiwangzhijia.wuliu.ui.SearchShopActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shuiwangzhijia.wuliu.ui.CompanyBuyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shuiwangzhijia.wuliu.ui.OrderCommentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shuiwangzhijia.wuliu.ui.SelectImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shuiwangzhijia.wuliu.ui.PhotoViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shuiwangzhijia.wuliu.ui.AboutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shuiwangzhijia.wuliu.ui.PurchaseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shuiwangzhijia.wuliu.ui.ProcurementGoodsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shuiwangzhijia.wuliu.ui.RecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shuiwangzhijia.wuliu.ui.HandleOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shuiwangzhijia.wuliu.ui.ReceivePayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shuiwangzhijia.wuliu.ui.YiChangeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shuiwangzhijia.wuliu.ui.MapActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shuiwangzhijia.wuliu.ui.BucketManageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shuiwangzhijia.wuliu.ui.ReturnBucketActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shuiwangzhijia.wuliu.ui.DiscountTicketActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shuiwangzhijia.wuliu.ui.BucketRecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shuiwangzhijia.wuliu.ui.EditHandleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shuiwangzhijia.wuliu.ui.OtherBucketHandleActivity"
+            android:screenOrientation="portrait" />
+        <!-- 腾讯地图 -->
+        <meta-data
+            android:name="TencentMapSDK"
+            android:value="FUIBZ-NZV3X-6ZP4Z-T4RBO-BUXRF-XTB7W" />
+
+
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+ <!--       &lt;!&ndash; 第四方支付 &ndash;&gt;
+        <activity
+            android:name="com.pingplusplus.android.PaymentActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            tools:replace="android:launchMode" />
+
+        <activity-alias
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:targetActivity="com.pingplusplus.android.PaymentActivity" />
+
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind" />
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind" />
+        <activity
+            android:name="com.pingplusplus.ui.PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.pingplusplus.ui.PaySuccessActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" /> -->
+        <!-- 图片路径资源 版本问题 -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.shuiwangzhijia.wuliu.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider> <!-- 【必须】 信鸽receiver广播接收 -->
+        <receiver
+            android:name="com.tencent.android.tpush.XGPushReceiver"
+            android:process=":xg_service_v4"
+            tools:replace="android:process">
+            <intent-filter android:priority="0x7fffffff">
+
+                <!-- 【必须】 信鸽SDK的内部广播 -->
+                <action android:name="com.tencent.android.tpush.action.SDK" />
+                <action android:name="com.tencent.android.tpush.action.INTERNAL_PUSH_MESSAGE" />
+                <!-- 【必须】 系统广播：开屏和网络切换 -->
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <!-- 【可选】 一些常用的系统广播，增强信鸽service的复活机会，请根据需要选择。当然，你也可以添加APP自定义的一些广播让启动service -->
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver> <!-- 信鸽推送 -->
+        <receiver
+            android:name="com.shuiwangzhijia.wuliu.xinge.MessageReceiver"
+            android:exported="true">
+            <intent-filter>
+
+                <!-- 接收消息透传 -->
+                <action android:name="com.tencent.android.tpush.action.PUSH_MESSAGE" />
+                <!-- 监听注册、反注册、设置/删除标签、通知被点击等处理结果 -->
+                <action android:name="com.tencent.android.tpush.action.FEEDBACK" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.tencent.android.tpush.XGPushActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action" />
+            </intent-filter>
+        </activity> <!-- 【必须】 信鸽service -->
+        <service
+            android:name="com.tencent.android.tpush.service.XGPushServiceV4"
+            android:exported="true"
+            android:persistent="true"
+            android:process=":xg_service_v4" /> <!-- 【必须】 提高service的存活率 -->
+        <service
+            android:name="com.tencent.android.tpush.rpc.XGRemoteService"
+            android:exported="true">
+            <intent-filter>
+
+                <!-- 【必须】 请修改为当前APP包名 .PUSH_ACTION, 如demo的包名为：com.qq.xgdemo -->
+                <action android:name="com.funengda.driver.PUSH_ACTION" />
+            </intent-filter>
+        </service> <!-- 【必须】 【注意】authorities修改为 包名.AUTH_XGPUSH, 如demo的包名为：com.qq.xgdemo -->
+        <provider
+            android:name="com.tencent.android.tpush.XGPushProvider"
+            android:authorities="com.shuiwangzhijia.wuliu.AUTH_XGPUSH"
+            android:exported="true" /> <!-- 【必须】 【注意】authorities修改为 包名.TPUSH_PROVIDER, 如demo的包名为：com.qq.xgdemo -->
+        <provider
+            android:name="com.tencent.android.tpush.SettingsContentProvider"
+            android:authorities="com.shuiwangzhijia.wuliu.TPUSH_PROVIDER"
+            android:exported="false" /> <!-- 【必须】 【注意】authorities修改为 包名.TENCENT.MID.V3, 如demo的包名为：com.qq.xgdemo -->
+        <provider
+            android:name="com.tencent.mid.api.MidProvider"
+            android:authorities="com.shuiwangzhijia.wuliu.TENCENT.MID.V3"
+            android:exported="true" /> <!-- 【必须】 请将YOUR_ACCESS_ID修改为APP的AccessId，“21”开头的10位数字，中间没空格 -->
+        <meta-data
+            android:name="XG_V2_ACCESS_ID"
+            android:value="${XG_ACCESS_ID}" /> <!-- 【必须】 请将YOUR_ACCESS_KEY修改为APP的AccessKey，“A”开头的12位字符串，中间没空格 -->
+        <meta-data
+            android:name="XG_V2_ACCESS_KEY"
+            android:value="${XG_ACCESS_KEY}" />
+
+        <activity android:name="com.shuiwangzhijia.wuliu.ui.OperationOrderActivity" />
+        <activity android:name="com.shuiwangzhijia.wuliu.ui.OperationOrderActivityNew" />
+        <activity android:name="com.shuiwangzhijia.wuliu.ui.CompletedDetailActivity" />
+        <activity android:name="com.shuiwangzhijia.wuliu.ui.PendingOrderActivity" />
+
+        <receiver
+            android:name="com.shuiwangzhijia.wuliu.ui.NetworkConnectChangedReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+                <action android:name="android.net.wifi.STATE_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name="com.shuiwangzhijia.wuliu.ui.EditShippingOrderActivity" />
+        <activity android:name="com.shuiwangzhijia.wuliu.activitydriver.DriverHomePageActivity" />
+        <activity android:name="com.shuiwangzhijia.wuliu.activitywarehouse.WareHouseHomePageActivity" />
+        <activity android:name="com.shuiwangzhijia.wuliu.activitydriver.DriverNewOrderActivity" /> <!-- 仓库端 -->
+        <activity android:name="com.shuiwangzhijia.wuliu.uiwarehouse.EditHandleActivity" />
+        <activity android:name="com.shuiwangzhijia.wuliu.uiwarehouse.HandleOrderActivity" />
+        <activity android:name="com.shuiwangzhijia.wuliu.uiwarehouse.HandleOrderActivityForSure" />
+        <activity android:name="com.shuiwangzhijia.wuliu.uiwarehouse.HuiChangConfirmActivity" />
+        <activity android:name="com.shuiwangzhijia.wuliu.uiwarehouse.MainActivity" />
+        <activity android:name="com.shuiwangzhijia.wuliu.uiwarehouse.OrderDetailActivity" />
+        <activity android:name="com.shuiwangzhijia.wuliu.uiwarehouse.RecordActivity" />
+        <activity android:name="com.shuiwangzhijia.wuliu.activitydriver.NearbyActivity" />
+    </application>
+
+</manifest>

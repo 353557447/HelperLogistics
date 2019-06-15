@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f5f5f5"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/dp_10"
+        android:paddingLeft="@dimen/dp_44"
+        android:paddingRight="@dimen/dp_44"
+        android:paddingTop="@dimen/dp_10">
+
+        <TextView
+            android:id="@+id/saleBtn"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/dp_25"
+            android:layout_marginRight="@dimen/dp_40"
+            android:background="@drawable/bg_blue_white"
+            android:gravity="center"
+            android:text="卖水订单"
+            android:textColor="@drawable/gray_white"
+            android:textSize="@dimen/font_14" />
+
+        <TextView
+            android:id="@+id/buyBtn"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/dp_25"
+            android:layout_marginLeft="@dimen/dp_40"
+            android:background="@drawable/bg_blue_white"
+            android:gravity="center"
+            android:text="采购订单"
+            android:textColor="@drawable/gray_white"
+            android:textSize="@dimen/font_14" />
+    </LinearLayout>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:background="@color/color_ffffff"
+        app:tabSelectedTextColor="@color/color_30adfd"
+        app:tabTextAppearance="@style/TabLayoutTextStyle"
+        app:tabTextColor="@color/color_999999"></android.support.design.widget.TabLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_ffffff"></android.support.v4.view.ViewPager>
+</LinearLayout>

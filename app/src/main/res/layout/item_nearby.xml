@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_solid_five_radius_bg"
+    android:orientation="vertical"
+    android:padding="@dimen/d16">
+
+    <!-- <ImageView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginRight="@dimen/dp_10"
+         android:src="@drawable/shop" />-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="神仙水广场"
+            android:textColor="@color/textBlack"
+            android:textSize="@dimen/d16"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="1000米"
+            android:textColor="@color/textRed"
+            android:textSize="@dimen/d10" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/margin10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_centerVertical="true"
+            android:id="@+id/location_icon"
+            android:src="@drawable/location_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginLeft="@dimen/margin10"
+            android:layout_toRightOf="@id/location_icon"
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/dp_8"
+            android:text="深圳市福田区华能大厦中区25楼"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/font_10" />
+        <ImageView
+            android:id="@+id/rightIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:src="@drawable/choose" />
+    </RelativeLayout>
+</LinearLayout>

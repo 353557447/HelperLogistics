@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgColor"
+    android:orientation="vertical"
+    tools:context="com.shuiwangzhijia.wuliu.ui.EditShippingOrderActivity">
+
+    <ScrollView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/d12">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/white_solid_five_radius_bg"
+                android:orientation="vertical"
+                android:padding="@dimen/padding16">
+
+                <TextView
+                    android:id="@+id/order_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="出货单号："
+                    android:textColor="#181818"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:text="下单时间："
+                    android:textColor="#181818"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="@dimen/d16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/d12"
+                android:background="@drawable/white_solid_five_radius_bg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="订单实际提货"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/d16"
+                    android:textStyle="bold" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/actual_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </android.support.v7.widget.RecyclerView>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp">
+
+                    <TextView
+                        android:id="@+id/actual_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:text="合计：480（桶）"
+                        android:textColor="@color/textRed"
+                        android:textSize="@dimen/d15" />
+
+                    <TextView
+                        android:id="@+id/edit_number"
+                        android:layout_width="100dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/cff4d14_solid_big_radius_bg"
+                        android:gravity="center"
+                        android:text="修改订单数量"
+                        android:textColor="#FFFFFF"
+                        android:textSize="13sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:padding="@dimen/d16"
+                android:background="@drawable/white_solid_five_radius_bg"
+                android:layout_marginTop="@dimen/d12"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="额外添加商品数量"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/additional_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:id="@+id/additional_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:text="合计：480（桶）"
+                    android:textColor="@color/textRed"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/add_additional"
+                    android:layout_width="100dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/blue_rectangle"
+                    android:gravity="center"
+                    android:text="添加商品"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:id="@+id/pendding_order_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="49dp">
+
+        <TextView
+            android:id="@+id/pending_order_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/pending_order_surnbtn"
+            android:layout_alignBottom="@+id/pending_order_surnbtn"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="19dp"
+            android:layout_marginStart="19dp"
+            android:text="共160（箱/桶）"
+            android:textColor="#FE0233"
+            android:textSize="@dimen/d14" />
+
+        <TextView
+            android:id="@+id/pending_order_surnbtn"
+            android:layout_width="120dp"
+            android:layout_height="49dp"
+            android:layout_alignParentRight="true"
+            android:background="#FF4D14"
+            android:gravity="center"
+            android:text="确定出货单"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/d16" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/wudingdan" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv"
+            android:gravity="center"
+            android:text="暂时没有相关的订单哦~~"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/font_12" />
+    </RelativeLayout>
+</LinearLayout>

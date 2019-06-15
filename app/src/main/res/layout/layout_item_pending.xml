@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/order_entirety_bg"
+    android:orientation="vertical"
+    android:padding="@dimen/padding16">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="出货单号："
+                android:textColor="#FFF000"
+                android:textSize="@dimen/d14" />
+
+            <TextView
+                android:id="@+id/deliver_order_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="123456"
+                android:textColor="@color/white"
+                android:textSize="@dimen/d14" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/item_pending_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="共60桶"
+            android:textColor="@color/white"
+            android:textSize="@dimen/d14" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/item_pending_adress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="送至：深圳市福田区华强北华能大厦中区25楼"
+        android:textColor="@color/white"
+        android:textSize="@dimen/d14" />
+
+    <TextView
+        android:id="@+id/item_pending_shop_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="水店：正哥来了水店"
+        android:textColor="@color/white"
+        android:textSize="@dimen/d14" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/item_pending_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+    <RelativeLayout
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/margin10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textColor="#FFF000"
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text=""
+            android:textSize="14dp"
+            android:visibility="gone" />
+
+        <CheckBox
+            android:id="@+id/item_pending_cb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="end"
+            android:background="@null"
+            android:button="@drawable/yellow_bg_check" />
+    </RelativeLayout>
+
+</LinearLayout>

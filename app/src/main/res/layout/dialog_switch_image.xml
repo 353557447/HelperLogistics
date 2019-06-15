@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f5f5f5"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/camera"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/font_18"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/color_ffffff"
+        android:gravity="center"
+        android:text="拍照" />
+
+    <View
+        style="@style/line"/>
+
+    <TextView
+        android:id="@+id/photo"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/font_18"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/color_ffffff"
+        android:gravity="center"
+        android:text="相册" />
+    <View
+        style="@style/line"/>
+    <LinearLayout
+        android:id="@+id/llClose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/color_ffffff"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="15dp" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_ffffff"
+            android:gravity="center"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/font_18"
+            android:text="取消" />
+    </LinearLayout>
+
+</LinearLayout>

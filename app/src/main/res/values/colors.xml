@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF014E</color>
+    <color name="colorPrimaryDark">#FF014E</color>
+    <color name="colorAccent">#FF014E</color>
+
+    <color name="color_30adfd">#FF014E</color>
+    <color name="color_666666">#666666</color>
+    <color name="color_999999">#999999</color>
+    <color name="color_e5e5e5">#E5E5E5</color>
+    <color name="color_ffffff">#ffffff</color>
+    <color name="color_333333">#333333</color>
+    <color name="color_09bb07">#09BB07</color>
+    <color name="color_f5f5f5">#f5f5f5</color>
+    <color name="color_bbbbbb">#bbbbbb</color>
+    <color name="color_5a5a5a">#5a5a5a</color>
+    <color name="color_ff3939">#FF3939</color>
+    <color name="color_eeeeee">#eeeeee</color>
+    <color name="color_f83127">#F83127</color>
+    <color name="background">#FFFFFF</color>
+    <color name="split_line">#11112233</color>
+    <color name="color_black">#000000</color>
+    <color name="color_ff8331">#FF8331</color>
+    <color name="waterColor">#FFFFFF</color>
+    <color name="textstatus">#999999</color>
+    <color name="textstatus_other">#30ADFD</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="red">#ff0000</color>
+    <color name="common_red">#FE0233</color>
+    <color name="green">#00ff00</color>
+    <color name="common_green">#26D1A8</color>
+    <color name="common_yellow">#FF4D14</color>
+    <color name="blue">#0000ff</color>
+    <color name="common_blue">#047AFF</color>
+    <color name="textBlack">#212121</color>
+    <color name="textWhite">#ffffff</color>
+    <color name="textRed">#FE0233</color>
+    <color name="textGray">#9D9D9D</color>
+    <color name="textBrownGray">#494848</color>
+    <color name="bgColor">#F0EFEF</color>
+    <color name="lineColor">#eeeeee</color>
+    <color name="lineDeepColor">#999999</color>
+    <color name="chatBgColor">#E8EBF4</color>
+    <color name="chatLineColor">#D9D9D9</color>
+    <color name="c30adfd">#30ADFD</color>
+    <color name="c505E84">#505E84</color>
+    <color name="cFF014E">#FF014E</color>
+    <color name="color_DF3A44">#DF3A44</color>
+</resources>

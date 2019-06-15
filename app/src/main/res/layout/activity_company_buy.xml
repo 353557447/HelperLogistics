@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_ffffff">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_ffffff"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10">
+
+        <TextView
+            style="@style/company_title"
+            android:text="公司名称" />
+
+        <EditText
+            android:id="@+id/companyEdit"
+            style="@style/company_edit" />
+
+        <TextView
+            style="@style/company_title"
+            android:text="配送地址" />
+
+        <EditText
+            android:id="@+id/addressEdit"
+            style="@style/company_edit" />
+
+        <TextView
+            style="@style/company_title"
+            android:text="联系人" />
+
+        <EditText
+            android:id="@+id/contactsEdit"
+            style="@style/company_edit" />
+
+        <TextView
+            style="@style/company_title"
+            android:text="联系电话" />
+
+        <EditText
+            android:id="@+id/phoneEdit"
+            style="@style/company_edit"
+            android:inputType="phone" />
+
+        <TextView
+            style="@style/company_title"
+            android:text="公司电话" />
+
+        <EditText
+            android:id="@+id/companyPhoneEdit"
+            style="@style/company_edit"
+            android:inputType="phone" />
+
+        <TextView
+            style="@style/company_title"
+            android:text="每月需求（桶）" />
+
+        <EditText
+            android:id="@+id/countEdit"
+            style="@style/company_edit"
+            android:inputType="number" />
+
+        <TextView
+            style="@style/company_title"
+            android:text="工厂名称" />
+
+        <EditText
+            android:id="@+id/factoryEdit"
+            style="@style/company_edit" />
+
+        <TextView
+            style="@style/company_title"
+            android:text="备注" />
+
+
+        <EditText
+            android:id="@+id/hintEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_e5e5e5"
+            android:gravity="left"
+            android:maxEms="200"
+            android:maxLength="200"
+            android:minHeight="@dimen/dp_85"
+            android:paddingLeft="@dimen/dp_5"
+            android:paddingRight="@dimen/dp_5"
+            android:paddingTop="@dimen/dp_5"
+            android:text=""
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/font_15" />
+
+        <TextView
+            android:id="@+id/count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_e5e5e5"
+            android:gravity="center_vertical|right"
+            android:paddingBottom="@dimen/dp_5"
+            android:paddingRight="@dimen/dp_5"
+            android:text="0/200"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/font_12" />
+
+        <TextView
+            android:id="@+id/sureBtn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@drawable/blue_rectangle"
+            android:gravity="center"
+            android:text="确认"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/font_16" />
+    </LinearLayout>
+</ScrollView>
