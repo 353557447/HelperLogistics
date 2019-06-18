@@ -161,7 +161,7 @@ public class DriverHomePageActivity extends BaseActivity implements TencentLocat
                     mReturnBucketCounts.setText("" + userBean.getToday_buck());
                     mTodayGathering.setText("" + userBean.getToday_price());
                 }
-                if(body.getScode()==-200){
+                if (body.getScode() == -200) {
                     skipActivity(LoginActivity.class);
                     closeActivity();
                 }
@@ -209,15 +209,13 @@ public class DriverHomePageActivity extends BaseActivity implements TencentLocat
     }
 
 
-
-
     @Override
     protected void initEvent() {
 
     }
 
     private void checkVersion() {
-        RetrofitUtils.getInstances().create().getAppVersionInfo( 0, 2).enqueue(new Callback<EntityObject<UpdateInfo>>() {
+        RetrofitUtils.getInstances().create().getAppVersionInfo(0, 2).enqueue(new Callback<EntityObject<UpdateInfo>>() {
             @Override
             public void onResponse(Call<EntityObject<UpdateInfo>> call, Response<EntityObject<UpdateInfo>> response) {
                 EntityObject<UpdateInfo> body = response.body();
@@ -239,7 +237,7 @@ public class DriverHomePageActivity extends BaseActivity implements TencentLocat
                         isUpdate = 2;
                     }
                     if (isUpdate != -1) {
-                        UpdatingDialog updatingDialog = new UpdatingDialog(DriverHomePageActivity.this, result, isUpdate, false,download_type);
+                        UpdatingDialog updatingDialog = new UpdatingDialog(DriverHomePageActivity.this, result, isUpdate, false, download_type);
                         updatingDialog.show();
                     }
 
@@ -292,20 +290,21 @@ public class DriverHomePageActivity extends BaseActivity implements TencentLocat
     @OnClick({R.id.search, R.id.create_order, R.id.wait_for_get, R.id.distributioning,//
             R.id.completed, R.id.send_distributioning, R.id.send_completed, //
             R.id.in_the_credit, R.id.driver_order_ll, R.id.setting,//
-            R.id.total_send_counts_ll, R.id.return_bucket_counts_ll, R.id.today_gathering_ll
+            R.id.total_send_counts_ll, R.id.return_bucket_counts_ll, //
+            R.id.today_gathering_ll, R.id.search_content
     })
     public void onViewClicked(View view) {
         Bundle bundle;
         switch (view.getId()) {
             case R.id.search:
                 String searchContent = mSearchContent.getText().toString().trim();
-                if(TextUtils.isEmpty(searchContent)){
+                if (TextUtils.isEmpty(searchContent)) {
                     showToast("请填写搜索内容~");
                     return;
                 }
-                bundle=new Bundle();
-                bundle.putString("searchContent",searchContent);
-                skipActivity(DriverSearchOrder.class,bundle);
+                bundle = new Bundle();
+                bundle.putString("searchContent", searchContent);
+                skipActivity(DriverSearchOrder.class, bundle);
                 break;
             case R.id.create_order:
                 bundle = new Bundle();
@@ -356,6 +355,9 @@ public class DriverHomePageActivity extends BaseActivity implements TencentLocat
                 break;
             case R.id.today_gathering_ll:
                 RecordActivity.startAct(this, 2, null);
+                break;
+            case R.id.search_content:
+                skipActivity(DSearchOrderActivity.class);
                 break;
         }
     }

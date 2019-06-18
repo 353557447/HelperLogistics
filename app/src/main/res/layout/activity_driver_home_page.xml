@@ -110,6 +110,7 @@
                     android:src="@drawable/gray_search_icon" />
 
                 <EditText
+                    android:focusable="false"
                     android:id="@+id/search_content"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"

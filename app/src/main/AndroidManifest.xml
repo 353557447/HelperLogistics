@@ -25,20 +25,22 @@
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
 
     <application
-        android:name="com.shuiwangzhijia.wuliu.base.App"
+        android:name=".base.App"
         android:allowBackup="true"
         android:icon="@mipmap/logo"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.shuiwangzhijia.wuliu.activitywarehouse.WhSearchOrderActivity"></activity>
-        <activity android:name="com.shuiwangzhijia.wuliu.activitydriver.DriverSearchOrder" />
-        <activity android:name="com.shuiwangzhijia.wuliu.activitydriver.DriverDeliverOrderActivity" />
-        <activity android:name="com.shuiwangzhijia.wuliu.activitywarehouse.SelfDeliverOrderActivity" />
-        <activity android:name="com.shuiwangzhijia.wuliu.activitywarehouse.DeliverOrderActivity" /> <!-- android:theme="@style/SplashThemeImage" -->
+        <activity android:name=".activitywarehouse.WSearchOrderActivity"></activity>
+        <activity android:name=".activitydriver.DSearchOrderActivity" />
+        <activity android:name=".activitywarehouse.WhSearchOrderActivity" />
+        <activity android:name=".activitydriver.DriverSearchOrder" />
+        <activity android:name=".activitydriver.DriverDeliverOrderActivity" />
+        <activity android:name=".activitywarehouse.SelfDeliverOrderActivity" />
+        <activity android:name=".activitywarehouse.DeliverOrderActivity" /> <!-- android:theme="@style/SplashThemeImage" -->
         <activity
-            android:name="com.shuiwangzhijia.wuliu.ui.SplashActivity"
+            android:name=".ui.SplashActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -47,132 +49,130 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.shuiwangzhijia.wuliu.ui.LoginActivity"
+            android:name=".ui.LoginActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.shuiwangzhijia.wuliu.ui.MainActivity"
+            android:name=".ui.MainActivity"
             android:launchMode="singleInstance"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.shuiwangzhijia.wuliu.ui.MsgActivity"
+            android:name=".ui.MsgActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.shuiwangzhijia.wuliu.ui.ShopManageActivity"
+            android:name=".ui.ShopManageActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.shuiwangzhijia.wuliu.ui.GoodsManageActivity"
+            android:name=".ui.GoodsManageActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.shuiwangzhijia.wuliu.ui.CashActivity"
+            android:name=".ui.CashActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.shuiwangzhijia.wuliu.ui.ConsumerDetailActivity"
+            android:name=".ui.ConsumerDetailActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.shuiwangzhijia.wuliu.ui.CustomerManageActivity"
+            android:name=".ui.CustomerManageActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.shuiwangzhijia.wuliu.ui.OrderManageActivity"
+            android:name=".ui.OrderManageActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.shuiwangzhijia.wuliu.ui.ShopCountActivity"
+            android:name=".ui.ShopCountActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.shuiwangzhijia.wuliu.ui.SetActivity"
+            android:name=".ui.SetActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.shuiwangzhijia.wuliu.ui.AddressManageActivity"
+            android:name=".ui.AddressManageActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.shuiwangzhijia.wuliu.ui.EditAddressActivity"
+            android:name=".ui.EditAddressActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.shuiwangzhijia.wuliu.ui.ShopSpreadActivity"
+            android:name=".ui.ShopSpreadActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.shuiwangzhijia.wuliu.ui.ShopStudyActivity"
+            android:name=".ui.ShopStudyActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.shuiwangzhijia.wuliu.ui.ConfirmOrderActivity"
+            android:name=".ui.ConfirmOrderActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.shuiwangzhijia.wuliu.ui.OrderPayActivity"
+            android:name=".ui.OrderPayActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.shuiwangzhijia.wuliu.ui.CountActivity"
+            android:name=".ui.CountActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.shuiwangzhijia.wuliu.ui.OrderDetailActivity"
+            android:name=".ui.OrderDetailActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.shuiwangzhijia.wuliu.ui.ShoppingCartActivity"
+            android:name=".ui.ShoppingCartActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.shuiwangzhijia.wuliu.ui.SelectShopActivity"
+            android:name=".ui.SelectShopActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.shuiwangzhijia.wuliu.ui.SearchShopActivity"
+            android:name=".ui.SearchShopActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.shuiwangzhijia.wuliu.ui.CompanyBuyActivity"
+            android:name=".ui.CompanyBuyActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.shuiwangzhijia.wuliu.ui.OrderCommentActivity"
+            android:name=".ui.OrderCommentActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.shuiwangzhijia.wuliu.ui.SelectImageActivity"
+            android:name=".ui.SelectImageActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.shuiwangzhijia.wuliu.ui.PhotoViewActivity"
+            android:name=".ui.PhotoViewActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.shuiwangzhijia.wuliu.ui.AboutActivity"
+            android:name=".ui.AboutActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.shuiwangzhijia.wuliu.ui.PurchaseActivity"
+            android:name=".ui.PurchaseActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.shuiwangzhijia.wuliu.ui.ProcurementGoodsActivity"
+            android:name=".ui.ProcurementGoodsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.shuiwangzhijia.wuliu.ui.RecordActivity"
+            android:name=".ui.RecordActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.shuiwangzhijia.wuliu.ui.HandleOrderActivity"
+            android:name=".ui.HandleOrderActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.shuiwangzhijia.wuliu.ui.ReceivePayActivity"
+            android:name=".ui.ReceivePayActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.shuiwangzhijia.wuliu.ui.YiChangeActivity"
+            android:name=".ui.YiChangeActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.shuiwangzhijia.wuliu.ui.MapActivity"
+            android:name=".ui.MapActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.shuiwangzhijia.wuliu.ui.BucketManageActivity"
+            android:name=".ui.BucketManageActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.shuiwangzhijia.wuliu.ui.ReturnBucketActivity"
+            android:name=".ui.ReturnBucketActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.shuiwangzhijia.wuliu.ui.DiscountTicketActivity"
+            android:name=".ui.DiscountTicketActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.shuiwangzhijia.wuliu.ui.BucketRecordActivity"
+            android:name=".ui.BucketRecordActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.shuiwangzhijia.wuliu.ui.EditHandleActivity"
+            android:name=".ui.EditHandleActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.shuiwangzhijia.wuliu.ui.OtherBucketHandleActivity"
-            android:screenOrientation="portrait" />
-        <!-- 腾讯地图 -->
+            android:name=".ui.OtherBucketHandleActivity"
+            android:screenOrientation="portrait" /> <!-- 腾讯地图 -->
         <meta-data
             android:name="TencentMapSDK"
             android:value="FUIBZ-NZV3X-6ZP4Z-T4RBO-BUXRF-XTB7W" />
-
 
         <activity
             android:name=".wxapi.WXPayEntryActivity"
@@ -190,8 +190,8 @@
             android:exported="false"
             android:screenOrientation="behind"
             android:windowSoftInputMode="adjustResize|stateHidden" />
-
- <!--       &lt;!&ndash; 第四方支付 &ndash;&gt;
+        <!--
+       &lt;!&ndash; 第四方支付 &ndash;&gt;
         <activity
             android:name="com.pingplusplus.android.PaymentActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize"
@@ -220,7 +220,8 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <activity
             android:name="com.pingplusplus.ui.PaySuccessActivity"
-            android:configChanges="orientation|keyboardHidden|navigation|screenSize" /> -->
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+        -->
         <!-- 图片路径资源 版本问题 -->
         <provider
             android:name="android.support.v4.content.FileProvider"
@@ -250,7 +251,7 @@
             </intent-filter>
         </receiver> <!-- 信鸽推送 -->
         <receiver
-            android:name="com.shuiwangzhijia.wuliu.xinge.MessageReceiver"
+            android:name=".xinge.MessageReceiver"
             android:exported="true">
             <intent-filter>
 
@@ -301,13 +302,13 @@
             android:name="XG_V2_ACCESS_KEY"
             android:value="${XG_ACCESS_KEY}" />
 
-        <activity android:name="com.shuiwangzhijia.wuliu.ui.OperationOrderActivity" />
-        <activity android:name="com.shuiwangzhijia.wuliu.ui.OperationOrderActivityNew" />
-        <activity android:name="com.shuiwangzhijia.wuliu.ui.CompletedDetailActivity" />
-        <activity android:name="com.shuiwangzhijia.wuliu.ui.PendingOrderActivity" />
+        <activity android:name=".ui.OperationOrderActivity" />
+        <activity android:name=".ui.OperationOrderActivityNew" />
+        <activity android:name=".ui.CompletedDetailActivity" />
+        <activity android:name=".ui.PendingOrderActivity" />
 
         <receiver
-            android:name="com.shuiwangzhijia.wuliu.ui.NetworkConnectChangedReceiver"
+            android:name=".ui.NetworkConnectChangedReceiver"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
@@ -317,18 +318,18 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name="com.shuiwangzhijia.wuliu.ui.EditShippingOrderActivity" />
-        <activity android:name="com.shuiwangzhijia.wuliu.activitydriver.DriverHomePageActivity" />
-        <activity android:name="com.shuiwangzhijia.wuliu.activitywarehouse.WareHouseHomePageActivity" />
-        <activity android:name="com.shuiwangzhijia.wuliu.activitydriver.DriverNewOrderActivity" /> <!-- 仓库端 -->
-        <activity android:name="com.shuiwangzhijia.wuliu.uiwarehouse.EditHandleActivity" />
-        <activity android:name="com.shuiwangzhijia.wuliu.uiwarehouse.HandleOrderActivity" />
-        <activity android:name="com.shuiwangzhijia.wuliu.uiwarehouse.HandleOrderActivityForSure" />
-        <activity android:name="com.shuiwangzhijia.wuliu.uiwarehouse.HuiChangConfirmActivity" />
-        <activity android:name="com.shuiwangzhijia.wuliu.uiwarehouse.MainActivity" />
-        <activity android:name="com.shuiwangzhijia.wuliu.uiwarehouse.OrderDetailActivity" />
-        <activity android:name="com.shuiwangzhijia.wuliu.uiwarehouse.RecordActivity" />
-        <activity android:name="com.shuiwangzhijia.wuliu.activitydriver.NearbyActivity" />
+        <activity android:name=".ui.EditShippingOrderActivity" />
+        <activity android:name=".activitydriver.DriverHomePageActivity" />
+        <activity android:name=".activitywarehouse.WareHouseHomePageActivity" />
+        <activity android:name=".activitydriver.DriverNewOrderActivity" /> <!-- 仓库端 -->
+        <activity android:name=".uiwarehouse.EditHandleActivity" />
+        <activity android:name=".uiwarehouse.HandleOrderActivity" />
+        <activity android:name=".uiwarehouse.HandleOrderActivityForSure" />
+        <activity android:name=".uiwarehouse.HuiChangConfirmActivity" />
+        <activity android:name=".uiwarehouse.MainActivity" />
+        <activity android:name=".uiwarehouse.OrderDetailActivity" />
+        <activity android:name=".uiwarehouse.RecordActivity" />
+        <activity android:name=".activitydriver.NearbyActivity" />
     </application>
 
 </manifest>

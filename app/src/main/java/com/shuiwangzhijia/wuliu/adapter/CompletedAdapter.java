@@ -37,7 +37,7 @@ public class CompletedAdapter extends RecyclerView.Adapter<CompletedAdapter.View
     public void onBindViewHolder(ViewHolder holder, int position) {
         OutOrderBean item = getItem(position);
         holder.mDeliverConsignee.setText("提货人："+item.getUname());
-        holder.mDeliverOrderNumber.setText("出货单号："+item.getOut_order());
+        holder.mDeliverOrderNumber.setText(""+item.getOut_order());
         holder.mCompletedNeedtext.setText("需提货："+item.getTotal()+"");
         holder.mCompletedAlreadyText.setText("已提货："+item.getSum()+"");
         holder.mCompletedTuishui.setText(item.getTsum()+"");

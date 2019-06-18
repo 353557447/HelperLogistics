@@ -16,10 +16,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-/**
- * 自营桶记录内部适配器
- * created by wangsuli on 2018/8/17.
- */
+
 public class RecordItemAdapter extends RecyclerView.Adapter<RecordItemAdapter.ViewHolder> {
     private final Context mContext;
 

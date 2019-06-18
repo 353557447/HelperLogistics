@@ -9,18 +9,23 @@
     tools:context="com.shuiwangzhijia.wuliu.activitydriver.DriverNewOrderActivity">
 
 
-    <android.support.design.widget.TabLayout
-        android:id="@+id/tabLayout"
+    <com.androidkun.xtablayout.XTabLayout
+        android:id="@+id/tab"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_50"
-        android:background="@color/color_ffffff"
-        app:tabSelectedTextColor="@color/color_30adfd"
-        app:tabTextAppearance="@style/TabLayoutTextStyle"
-        app:tabTextColor="@color/color_999999"></android.support.design.widget.TabLayout>
-
+        android:layout_height="50dp"
+        android:background="@color/white"
+        app:xTabIndicatorColor="@color/common_red"
+        app:xTabIndicatorHeight="3dp"
+        app:xTabIndicatorWidth="30dp"
+        app:xTabMode="fixed"
+        app:xTabSelectedTextColor="@color/common_red"
+        app:xTabSelectedTextSize="@dimen/d15"
+        app:xTabTextColor="@color/textBlack"
+        app:xTabTextSelectedBold="true"
+        app:xTabTextSize="@dimen/d14" />
 
     <android.support.v4.view.ViewPager
-        android:id="@+id/viewpager"
+        android:id="@+id/vp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"></android.support.v4.view.ViewPager>
 </LinearLayout>

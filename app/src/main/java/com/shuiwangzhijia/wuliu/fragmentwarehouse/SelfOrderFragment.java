@@ -50,10 +50,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-/**
- * 订单管理基础类
- * created by wangsuli on 2018/8/20.
- */
+
 public class SelfOrderFragment extends BaseFragment implements SwipeRefreshLayout.OnRefreshListener, OrderAdapter.OnViewItemClickListener {
     @BindView(R.id.mRecyclerView)
     RecyclerView mRecyclerView;

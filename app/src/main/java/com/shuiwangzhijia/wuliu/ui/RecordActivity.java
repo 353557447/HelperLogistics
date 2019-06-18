@@ -43,7 +43,6 @@ import retrofit2.Response;
 
 
 public class RecordActivity extends BaseAct implements RecordAdapter.OnRecyclerViewItemClickListener, Callback<EntityObject<ArrayList<RecordBean>>>, SwipeRefreshLayout.OnRefreshListener {
-
     @BindView(R.id.recyclerView)
     RecyclerView mRecyclerView;
     @BindView(R.id.date)

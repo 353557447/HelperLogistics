@@ -16,7 +16,6 @@
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/shop"
             android:drawablePadding="@dimen/dp_10"
-            android:text="水店"
             android:textColor="@color/color_333333"
             android:textSize="@dimen/font_14"
 

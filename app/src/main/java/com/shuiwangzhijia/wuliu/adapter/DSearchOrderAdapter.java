@@ -1,4 +1,4 @@
-package com.shuiwangzhijia.wuliu.adapterwarehouse;
+package com.shuiwangzhijia.wuliu.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.GridLayoutManager;
@@ -14,6 +14,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.shuiwangzhijia.wuliu.R;
+import com.shuiwangzhijia.wuliu.adapterwarehouse.OrderRealAdapter;
+import com.shuiwangzhijia.wuliu.bean.DSearchResultBean;
 import com.shuiwangzhijia.wuliu.beanwarehouse.OrderDetailBean;
 import com.shuiwangzhijia.wuliu.beanwarehouse.WarehouseOutOrderBean;
 import com.shuiwangzhijia.wuliu.utils.DateUtils;
@@ -24,17 +26,16 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-
-public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> {
+public class DSearchOrderAdapter extends RecyclerView.Adapter<DSearchOrderAdapter.ViewHolder> {
     private final Context mContext;
     private final int type;
 
     private OnViewItemClickListener mOnViewItemClickListener;
-    private ArrayList<WarehouseOutOrderBean> mData;
-    private OrderRealAdapter mMRealAdapter;
+    private List<DSearchResultBean.DataBean> mData;
+    private DSearchOrderSonAdapter mMRealAdapter;
 
 
-    public OrderAdapter(Context context, int type) {
+    public DSearchOrderAdapter(Context context, int type) {
         mContext = context;
         this.type = type;
         mData = new ArrayList<>();
@@ -43,15 +44,15 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         //View view = LayoutInflater.from(mContext).inflate(R.layout.item_warehouse_order, parent, false);
-        View view = LayoutInflater.from(mContext).inflate(R.layout.item_new_warehouse_order, parent, false);
+        View view = LayoutInflater.from(mContext).inflate(R.layout.item_d_search_order, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, final int position) {
-        final WarehouseOutOrderBean item = getItem(position);
+        final DSearchResultBean.DataBean item = getItem(position);
         holder.orderId.setText(item.getOut_order());
-        holder.name.setText("提货人：" + item.getUname());
+     /*   holder.name.setText("提货人：" + item.getUname());
         final int order_type = item.getOrder_type();
         if (order_type == 0){
             holder.mStatus.setText("配送");
@@ -59,7 +60,7 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
         }else if (order_type == 1){
             holder.mStatus.setText("自提");
             holder.mStatus.setBackgroundResource(R.drawable.orange_rectangle);
-        }
+        }*/
         holder.callBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -68,40 +69,34 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
         });
         switch (type) {
             case 0:
-                List<OrderDetailBean.ActualBean> goods = item.getGoods();
+               // List<OrderDetailBean.ActualBean> goods = item.getGoods();
+                List<DSearchResultBean.DataBean.GoodsBean> goods = item.getGoods();
 //                if (order_type == 0){
                     holder.firstBtn.setText("确认提货");
 //                }else if (order_type == 1){
 //                    holder.firstBtn.setText("出货操作");
 //                }
-                holder.llDetailInfo.setVisibility(View.GONE);
                 holder.mRv.setVisibility(View.VISIBLE);
                 holder.mStatus.setVisibility(View.VISIBLE);
                 holder.mRv.setLayoutManager(new GridLayoutManager(mContext,2));
                 holder.mRv.setHasFixedSize(true);
-                mMRealAdapter = new OrderRealAdapter(mContext, goods);
+                mMRealAdapter = new DSearchOrderSonAdapter(mContext, goods);
                 holder.mRv.setAdapter(mMRealAdapter);
                 holder.chuhuoshijian.setText("下单时间:");
                 holder.orderDate.setText("" + DateUtils.getFormatDateStr(item.getCreate_time() * 1000L));
                 holder.remark.setText("备注:" + item.getRemark());
-                holder.count.setText("共"+item.getTotal()+"桶");
+               // holder.count.setText("共"+item.getTotal()+"桶");
                // setTextStyle(holder.count, "共", "" + item.getTotal(), "桶");
                 break;
             case 1:
-                holder.llDetailInfo.setVisibility(View.VISIBLE);
                 holder.mRv.setVisibility(View.GONE);
 //                holder.mStatus.setVisibility(View.GONE);
                 holder.orderDate.setText("" + DateUtils.getFormatDateStr(item.getCreate_time() * 1000L));
-                if (order_type == 0){
+               /* if (order_type == 0){
                     holder.remark.setText("仓管员:" + item.getSname());
                 }else if (order_type == 1){
                     holder.remark.setVisibility(View.GONE);
-                }
-                holder.returnWaterNum.setText(""+item.getTsum());
-                holder.returnBucketNum.setText(""+item.getHsum());
-                holder.otherBucketNum.setText(""+item.getZsum());
-                holder.postNum.setText("已提货：" + item.getSum());
-                holder.needNum.setText("需提货：" + item.getTotal());
+                }*/
                 if (item.getStatus() == 1) {
                     holder.firstBtn.setText("查看详情");
                     holder.count.setText("出货中");
@@ -112,21 +107,15 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
                 break;
             case 2:
                 holder.firstBtn.setText("查看详情");
-                holder.llDetailInfo.setVisibility(View.VISIBLE);
                 holder.mRv.setVisibility(View.GONE);
 //                holder.mStatus.setVisibility(View.GONE);
                 holder.count.setText("已完成");
                 holder.orderDate.setText("" + DateUtils.getFormatDateStr(item.getCreate_time() * 1000L));
-                if (order_type == 0){
+            /*    if (order_type == 0){
                     holder.remark.setText("仓管员:" + item.getSname());
                 }else if (order_type == 1){
                     holder.remark.setVisibility(View.GONE);
-                }
-                holder.returnWaterNum.setText(""+item.getTsum());
-                holder.returnBucketNum.setText(""+item.getHsum());
-                holder.otherBucketNum.setText(""+item.getZsum());
-                holder.postNum.setText("已提货：" + item.getSum());
-                holder.needNum.setText("需提货：" + item.getTotal());
+                }*/
                 break;
         }
         holder.firstBtn.setTag(position);
@@ -137,7 +126,7 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
                 switch (type) {
                     case 0:
 //                        if (order_type == 0){
-                            mOnViewItemClickListener.onHandleOrderClick(tag, mMRealAdapter,order_type);
+                         //   mOnViewItemClickListener.onHandleOrderClick(tag, mMRealAdapter,order_type);
 //                        }else if (order_type == 1)
 //                            mOnViewItemClickListener.onHuichangOprea(tag);
                         break;
@@ -171,7 +160,7 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
         text.setText(spanString);
     }
 
-    public WarehouseOutOrderBean getItem(int position) {
+    public DSearchResultBean.DataBean getItem(int position) {
         return mData.get(position);
     }
 
@@ -184,18 +173,8 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
         mOnViewItemClickListener = listener;
     }
 
-    public void setData(ArrayList<WarehouseOutOrderBean> data) {
+    public void setData(List<DSearchResultBean.DataBean> data) {
         this.mData = data;
-        notifyDataSetChanged();
-    }
-
-    public ArrayList<WarehouseOutOrderBean> getData(){
-        return mData;
-    }
-
-    public void addData(ArrayList<WarehouseOutOrderBean> result) {
-        mData.addAll(result);
-        notifyDataSetChanged();
     }
 
 
@@ -204,7 +183,7 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
 
         void onDetailClick(int position);
 
-        void onHandleOrderClick(int position, OrderRealAdapter adapter, int order);
+        void onHandleOrderClick(int position, DSearchOrderSonAdapter adapter, int order);
 
         void onHuichangOprea(int position);
     }
@@ -226,8 +205,6 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
         TextView returnBucketNum;
         @BindView(R.id.otherBucketNum)
         TextView otherBucketNum;
-        @BindView(R.id.llDetailInfo)
-        LinearLayout llDetailInfo;
         @BindView(R.id.orderDate)
         TextView orderDate;
         @BindView(R.id.remark)
